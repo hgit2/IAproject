@@ -1,0 +1,133 @@
+SUGGESTION DE CONTENU POUR L'ETUDE
+
+
+Choix d'attributs
+=================
+
+
+* Ecarter les attributs semblant redondants car corrélés.
+
+* Utiliser des attributs dérivés pour faire apparaître des attributs pouvant
+être plus pertinents (valeur relative, ratio, différence, ...).
+
+* Choisir des dimensions privilégiées pour cibler l'étude et/ou simplifier les
+interprétations. Pour les méthodes utilisant des calculs de distances réduire à
+pas plus de 4 à 6 dimensions, et standardiser les données si nécessaire.
+
+
+Remarque:
+
+- Il est possible de compléter le jeu par d'autres sources.
+
+
+Choix des objets
+================
+
+
+* Ecarter les objets comportant des valeurs manquantes (sauf si l'on utilise des
+outils qui gèrent les valeurs manquantes).
+
+* Consigner (et éventuellement écarter) les outliers (individus hors norme,
+bruit ...), en 1D, 2D, n-dimensions.
+
+
+Clustering
+==========
+
+
+* Rechercher des clusters de forme arbitraire et de forme ellipsoïdale en
+essayant notamment Kmeans et la méthode hiérarchique "COMPLETE" et DBSCAN.
+
+* Calculer des dendrogrammes.
+
+* Choisir le nombre de clusters (courbe de SSE et/ou coefficient silhouette).
+
+* Etudier la stabilité de la convergence de K-means.
+
+* Comparer (par calcul d'entropie et par table de contingence) le contenu des
+clusters obtenus avec un étiquetage connu ou avec un autre clustering.
+
+* Réaliser une description des enveloppes des clusters a posteriori en
+construisant un arbre de décision (sur un jeu ayant au moins 4 dimensions).
+
+
+Remarques:
+
+- Ecarter des outliers peut améliorer la stabilité et les mesures de dispersion.
+
+- On peut évaluer le clustering en comparant la valeur de SSE ou de coefficient
+silhouette aux valeurs sur jeu aléatoire.
+
+
+Classification
+==============
+
+
+* Construire un label par discrétisation (ce label peut se construire par
+clustering sur un attribut). Utiliser ce label comme étiquette de classe.
+
+* Comparer les performances obtenues entre des modèles basés sur des arbres de
+décision et la méthode des K plus proches voisins.
+
+* Evaluer la qualité des modèles par validation croisée. (Indiquer les scores
+pour chaque sous-jeu test et le score global)
+
+* Modifier les paramètres d'apprentissage pour détecter/limiter un éventuel
+sur-apprentissage.
+
+
+Remarques:
+
+- une table de contingence peut permettre d'analyser les erreurs par classe.
+
+- Ecarter des outliers peut réduire le taux d'erreurs.
+
+- Le modèle de classification obtenu peut permettre de prédire la valeur de
+l'étiquette pour l'attribut cible sur des objets pour lesquels cette valeur
+d'attribut est manquante.
+
+
+Compte rendu
+============
+
+
+* Indiquer les choix faits.
+
+* Indiquer les commandes et les paramètres pour que les manipulations soient
+reproductibles.
+
+* Donner les résultats chiffres/graphiques (mais pas d'affichage complet des
+tableaux de données dans le compte rendu).
+
+* Essayer d'interpréter les résultats.
+
+
+Remarques:
+
+- Il est possible d'étudier plusieurs sous-ensembles d'attributs.
+
+- Il est possible de suggérer/consigner des pistes pour la poursuite du travail
+(pistes que l'on n'a pas le temps d'explorer pour le moment)
+
+
+
+Documents à rendre par mail (Christophe.Rigotti@insa-lyon.fr et
+Sergio.Peignier@insa-lyon.fr)
+===========================
+
+Un dossier aux noms du binôme (par ordre alphabetique) NOM1_NOM2
+rendu sous forme zip NOM1_NOM2.zip
+
+Ce dossier contiendra:
+
+- le pdf du rapport. Ce pdf peut être généré en exportant en pdf un notebook
+jupyter, mais en veillant à ce que la fenêtre du notebook avant exportation ne
+soit pas trop large, car sinon les lignes de commandes longues sont coupées.
+
+- le ou les fichiers (format txt) des données (utilisables pour reproduire
+l'étude). Ces fichiers seront eux-même des zip.
+
+- le ou les fichiers (format txt ou pdf) des définitions des variables.
+
+- le ou les notebooks jupyter (format .ipynb) permettant de ré-exécuter les
+traitements.

@@ -1,0 +1,60 @@
+=============================================================================
+Sélection et téléchargement des données
+en utilisant le site http://databank.worldbank.org
+
+aller sur la page:
+http://databank.worldbank.org/data/views/variableSelection/selectvariables.aspx?source=world-development-indicators
+
+ceci présélectionne dans l'item "Database" la base: "World Development Indicators"
+(cet item permet aussi d'avoir accès à d'autres bases)
+
+Ensuite choisir les pays, les variables et les années désirées, comme précisé ci-dessous.
+
+Section Country: cliquer "Countries" et cliquer l'icône "select all" (il s'agit de l'icône boite à cocher à gauche, ce n'est pas le bouton "All")
+(en cliquant "Aggregates" il est possible d'obtenir des données agrégées, ATTENTION à ne pas mélanger des données par pays et aussi des agrégats dans la même table)
+
+Plus bas sur la page dans la section Time: prendre une année (pas trop récente ni trop ancienne)
+ex : 2014
+
+Section Series: cliquer sur l'entonnoir pour filtrer et cliquer dans la liste qui apparaît sous l'entonnoir pour n'afficher que certains types d'indicateurs, puis cocher dans l'autre la liste à gauche les indicateurs voulus.
+
+
+Pour choisir le format des données
+cliquer sur l'onglet "LAYOUT"
+Section Orientation, et là choisir:
+time: page
+series: column
+country: row
+Cliquer sur "APPLY CHANGES"
+
+
+Pour récupérer les données:
+cliquer sur "Download Options" (en haut à droite)
+puis choisir dans la liste "Advanced Options"
+et dans l'onglet "DOWNLOAD FORMAT" choisir le format: "Tabbed TXT"
+puis les paramètres:
+export range: entire dataset
+data format: table
+variable format: both codes and names (pour obtenir les codes ET les noms longs pour les pays et pour les indicateurs)
+NA preferences: blank
+text field delimiter: " (cette option semble ne pas avoir d'effet)
+metadata: no
+
+puis choisir le bouton en bas: Download
+
+On obtient deux fichiers:
+- un fichier avec les données (séparateur "tabulation")
+- un fichier contenant les définitions des indicateurs leurs codes et leurs noms longs
+
+=============================================================================
+Relecture du fichier de données:
+
+- supprimer avec un éditeur les dernières lignes du fichier qui peuvent contenir des informations autres que les lignes de la table (par exemple des lignes de séparation, ou contenant la date de dernière mise à jour des indicateurs)
+
+- éventuellement éditer les noms des variables placés sur la première ligne pour les rendre plus lisibles (conserver les tabulations comme séparateurs)
+
+- lire le fichier avec une option pour avoir comme séparateur de champ les tabulations. Veiller à la bonne reconnaissance des types des champs (texte, numérique).
+
+- supprimer les attributs contenant beaucoup de valeurs manquantes.
+
+- supprimer les objets contenant au moins une valeur manquante.
