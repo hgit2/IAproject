@@ -1,4 +1,4 @@
-﻿Time	Time Code	Country Name	Country Code	Surface area (sq. km) [AG.SRF.TOTL.K2]	Population, total [SP.POP.TOTL]	GNI (current US$) [NY.GNP.MKTP.CD]
+﻿Time	Time Code	Country Name	Country Code	Surface	Population	GNI
 2010	YR2010	Afghanistan	AFG	652860	28803167	15998801042.3649
 2010	YR2010	Bangladesh	BGD	148460	152149102	124617096900.553
 2010	YR2010	Bhutan	BTN	38394	727641	1497491569.31098
